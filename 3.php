@@ -1,4 +1,6 @@
 <?php
+//ülesanne 2, Taivo Nurk 26.11
+
 /* Loo kaks täisarvulist muutujat, mis omavahel liidetakse, lahutatakse, korrutatakse,
 jagatakse ja leitakse jääk. Kusjuures vastuse kuvamisel näidatakse ka tehet ja kuvatakse eraldi ridadel.
 */
