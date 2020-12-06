@@ -50,6 +50,4 @@ if( $g == $h){
     echo 'Ristkülik <img height="35" width="auto" src="https://i0.wp.com/mathblog.wpengine.com/wp-content/uploads/2017/03/image005.gif?zoom=2.625&resize=364%2C222&ssl=1"><br>';
 }
 
-
-
 ?>

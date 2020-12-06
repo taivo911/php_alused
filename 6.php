@@ -67,8 +67,63 @@
             </form>
         </div>
     </div>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+        <h3>Juubelikalkulaator</h3>
+        <div class="form-group">
+            <input type="text" placeholder="aasta" name="aasta">
+        </div>
+        <button type="submit">Saada</button>
+
+        <?php
+        $aasta = 0;
+        if(!empty($_POST['aasta'])) {
+            extract($_POST);
+            if ((date('Y')-$aasta) % 5 == 0) {
+                echo 'Juubeliaasta!';
+            } else {
+                echo 'Pole juubeliaasta.';
+            }
+        } else if (isset($_POST['aasta'])){
+            echo 'Sisesta aasta.';
+        }
+        ?>
+    </form>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+        <h3>Hinne</h3>
+        <div class="form-group">
+            <input type="text" placeholder="punktide arv" name="punktid">
+        </div>
+        <button type="submit">Sisesta</button>
+        <?php
+        $punktid = 0;
+        if(!empty($_POST['punktid'])) {
+            extract($_POST);
+            switch ($punktid) {
+                case $punktid > 10:
+                    echo 'SUPER!';
+                    break;
+                case $punktid >= 5:
+                    echo 'TEHTUD!';
+                    break;
+                case $punktid > 0:
+                    echo 'KASIN!';
+            }
+        } else if (isset($_POST['punktid'])){
+            echo 'SISESTA OMA PUNKTID!';
+        }
+        ?>
+    </form>
+</div>
+        <div class="col-md-6">
+        </div>
+            <div class="col-md-6">
+        </div>
+    </div>
     </div>
 </div>
+
+
+
 
 <script src="https://taivonurk.ikt.khk.ee/js/jquery-3.3.1.min.js"></script>
 <script src="https://taivonurk.ikt.khk.ee/js/popper.min.js"></script>
