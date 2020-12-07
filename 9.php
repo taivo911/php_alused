@@ -63,7 +63,7 @@
     $kolmas = $_GET['kolmas']??'';
 
     function jada($esimene,$teine,$kolmas) {
-        if($nr3 >0) {
+        if($kolmas >0) {
             for($y=$esimene;$y<=$teine;$y += $kolmas) {
                 echo $y."<br>";
             }}
