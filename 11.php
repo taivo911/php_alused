@@ -51,9 +51,9 @@ if (isset($_GET['soimu'])) {
 
 //meiliaadressi yhtsele kujule viimine
 echo '<form action="11.php" method="get">
-        <label for="ees">Sisesta lause mis sisaldab s6na noob</label>
+        <label for="ees">Eesnimi</label>
         <input type="text" name="ees" id="ees" ><br>
-         <label for="pere">Sisesta lause mis sisaldab s6na noob</label>
+         <label for="pere">Perekonnanimi</label>
         <input type="text" name="pere" id="pere" ><br>
         <input type="submit" value="Sisesta">
     </form>';
