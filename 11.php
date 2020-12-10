@@ -48,3 +48,22 @@ if (isset($_GET['soimu'])) {
         echo substr_replace($tekst, $asendus, $asenduse_algus, $asenduse_markide_arv);
 }}
 
+
+//meiliaadressi yhtsele kujule viimine
+echo '<form action="11.php" method="get">
+        <label for="ees">Sisesta lause mis sisaldab s6na noob</label>
+        <input type="text" name="ees" id="ees" ><br>
+         <label for="pere">Sisesta lause mis sisaldab s6na noob</label>
+        <input type="text" name="pere" id="pere" ><br>
+        <input type="submit" value="Sisesta">
+    </form>';
+
+$ees = $_GET['ees'] ?? '';
+$pere = $_GET['pere'] ?? '';
+
+if (isset($_GET['ees'])) {
+    $mail = $ees.".".$pere."@khk.ee";;
+    $otsi = array('ä', 'ö', 'ü', 'õ');
+    $asenda = array('a', 'o', 'y', 'o');
+    echo strtolower(str_replace($otsi, $asenda, $mail));
+}
