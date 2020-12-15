@@ -12,7 +12,7 @@
     <a href="avaleht.php" >Avalent</a> |
     <a href="avaleht.php?leht=portfoolio">Portfoolio</a> |
     <a href="avaleht.php?leht=kaart">Kaart</a> |
-    <a href="avaleht.php?leht-kontakt">Kontakt</a>
+    <a href="avaleht.php?leht=kontakt">Kontakt</a>
 </menu>
 
 
