@@ -12,16 +12,23 @@
     <a href="avaleht.php" >Avalent</a> |
     <a href="avaleht.php?leht=portfoolio">Portfoolio</a> |
     <a href="avaleht.php?leht=kaart">Kaart</a> |
-    <a href="avaleht.php?leht=kontakt">Kontakt</a>
+    <a href="avaleht.php?leht=jupp">Ei eksisteeri</a>
 </menu>
 
 
 
 <?php
 
-if (!empty ($_GET["leht"])){
-    include ($_GET["leht"].'.php');
-}
+if(!empty($_GET['leht'])){
+    $leht = htmlspecialchars($_GET['leht']);
+    $lubatud = array('portfoolio','kaart','kontakt');
+    $kontroll = in_array($leht, $lubatud);
+    if($kontroll==true){
+        include($leht.'.php');
+    } else {
+        echo 'Valitud lehte ei eksisteeri!';
+    }
+} else {
 
 ?>
 <h2>Avaleht</h2>
